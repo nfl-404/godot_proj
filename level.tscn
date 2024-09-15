@@ -127,7 +127,7 @@ tile_map_data = PackedByteArray("AAAEAAcAAgADAAgAAAAFAAcAAgAEAAgAAAAGAAcAAgAFAAg
 tile_set = SubResource("TileSet_du2ip")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(270, 82)
+position = Vector2(148, 90)
 script = ExtResource("4_405ma")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
