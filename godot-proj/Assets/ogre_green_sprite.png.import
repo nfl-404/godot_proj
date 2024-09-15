@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8oslchlhpwo3"
-path="res://.godot/imported/объёмные текстуры проба.png-e598c74af3482a0475f76cb23fe521df.ctex"
+uid="uid://3lym5w851kqf"
+path="res://.godot/imported/ogre_green_sprite.png-ed158b5d8b6514cce76e0201ed150048.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://объёмные текстуры проба.png"
-dest_files=["res://.godot/imported/объёмные текстуры проба.png-e598c74af3482a0475f76cb23fe521df.ctex"]
+source_file="res://Assets/ogre_green_sprite.png"
+dest_files=["res://.godot/imported/ogre_green_sprite.png-ed158b5d8b6514cce76e0201ed150048.ctex"]
 
 [params]
 

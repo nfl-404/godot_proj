@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvvpixwise0og"]
+
+[ext_resource type="Script" path="res://Player/player.gd" id="1_srugn"]
+[ext_resource type="Texture2D" uid="uid://3lym5w851kqf" path="res://Assets/ogre_green_sprite.png" id="2_6lp4p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ddnx"]
+radius = 17.0
+height = 58.0
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+collision_layer = 2
+collision_mask = 13
+script = ExtResource("1_srugn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_6lp4p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_3ddnx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
