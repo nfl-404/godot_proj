@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsvlg5c3cta2j"]
+[gd_scene load_steps=6 format=3 uid="uid://s4nck70s7fwg"]
 
 [ext_resource type="Texture2D" uid="uid://dc3i7jbyt0olt" path="res://Assets/environment/pine_action.png" id="1_n3ksm"]
 [ext_resource type="PackedScene" uid="uid://ccjhdth03k5e6" path="res://Base/BaseInteraction/interaction_area/interaction_area.tscn" id="2_7324m"]
@@ -9,17 +9,14 @@ script/source = "extends StaticBody2D
 
 @onready var interaction_area: InteractionArea = $InteractionArea
 @onready var label = $Label
-@onready var timer: Timer = $Timer
 
 func _ready():
 	label.hide()
 	interaction_area.interact = Callable(self, \"_show_line\")
 	
 func _show_line():
-	timer.start()
 	label.show()
-	
-func _on_timer_timeout() -> void:
+	await get_tree().create_timer(2).timeout
 	label.hide()
 "
 
@@ -54,9 +51,3 @@ offset_top = -41.0
 offset_right = 48.0
 offset_bottom = -18.0
 text = "Это ёлка"
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
-one_shot = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

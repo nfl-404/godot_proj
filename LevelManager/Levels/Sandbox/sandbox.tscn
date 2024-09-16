@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://ceep60cwv02ii"]
+[gd_scene load_steps=10 format=4 uid="uid://ceep60cwv02ii"]
 
 [ext_resource type="PackedScene" uid="uid://cvvpixwise0og" path="res://Player/player.tscn" id="1_xu7ik"]
 [ext_resource type="Texture2D" uid="uid://cnb34xcfcgfu2" path="res://Assets/Tilemaps/winter_tilemap_2demo.png" id="2_ilqcu"]
-[ext_resource type="PackedScene" path="res://LevelManager/Levels/Sandbox/pine_interact.tscn" id="3_pt7hv"]
+[ext_resource type="PackedScene" uid="uid://s4nck70s7fwg" path="res://LevelManager/Levels/Sandbox/pine_interact.tscn" id="3_pt7hv"]
+[ext_resource type="PackedScene" uid="uid://ce48ypd3h1x1m" path="res://Mobs/Enemies/Ogre/ogre.tscn" id="4_nnub6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uw3wf"]
 texture = ExtResource("2_ilqcu")
@@ -296,3 +297,8 @@ text = "почему-то не прячет лейбл
 
 [node name="pine_interact" parent="interactives" instance=ExtResource("3_pt7hv")]
 position = Vector2(1075, 488)
+
+[node name="Enemy" parent="." instance=ExtResource("4_nnub6")]
+position = Vector2(1341, 402)
+collision_layer = 1
+collision_mask = 1
