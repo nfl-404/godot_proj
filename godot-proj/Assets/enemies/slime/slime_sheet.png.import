@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3lym5w851kqf"
-path="res://.godot/imported/ogre_green_sprite.png-ed158b5d8b6514cce76e0201ed150048.ctex"
+uid="uid://3dp57604k5hg"
+path="res://.godot/imported/slime_sheet.png-c8234b799b71480e0b4ef2804f6b65ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ogre_green_sprite.png"
-dest_files=["res://.godot/imported/ogre_green_sprite.png-ed158b5d8b6514cce76e0201ed150048.ctex"]
+source_file="res://Assets/enemies/slime/slime_sheet.png"
+dest_files=["res://.godot/imported/slime_sheet.png-c8234b799b71480e0b4ef2804f6b65ce.ctex"]
 
 [params]
 

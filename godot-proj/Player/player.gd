@@ -2,8 +2,11 @@ extends BaseCharacter
 
 var health = 200
 
+@onready var anim: AnimatedSprite2D = $animatedsprite2d
+
+
 func _ready() -> void:
-	#anim.play("Idle")
+	anim.play("Idle")
 	pass
 
 
@@ -20,10 +23,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func updateAnimation() -> void:
-	pass
-	#if velocity.x:
-		#anim.flip_h = velocity.x < 0
-	#
+	if velocity.x:
+		anim.flip_h = velocity.x < 0
+	
 	#if velocity.y < 0:
 		#anim.play("Jump")
 		#return
@@ -32,8 +34,8 @@ func updateAnimation() -> void:
 		#return
 	#if velocity.x:
 		#anim.play("Run")
-	#else:
-		#anim.play("Idle")
+	else:
+		anim.play("Idle")
 
 func takeDamage(amount: float) -> void:
 	health -= amount
