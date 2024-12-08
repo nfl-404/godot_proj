@@ -12,4 +12,4 @@ func _strike() -> void:
 	strike = false
 	for area in areas:
 		strike = true
-		area.takeDamage(DAMAGE)
+		area.takeDamage(DAMAGE, Vector2(400, 0))
