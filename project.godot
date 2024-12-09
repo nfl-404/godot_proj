@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Новый игровой проект"
-run/main_scene="res://LevelManager/Levels/Sandbox/sandbox.tscn"
+run/main_scene="res://LevelManager/Menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 InteractionManager="*res://Base/BaseInteraction/InteractionManager.tscn"
+LevelManager="*res://LevelManager/LevelManager.tscn"
 
 [display]
 

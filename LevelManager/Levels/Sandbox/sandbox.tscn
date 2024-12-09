@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=4 uid="uid://ceep60cwv02ii"]
 
-[ext_resource type="PackedScene" uid="uid://cvvpixwise0og" path="res://Player/player.tscn" id="1_xu7ik"]
-[ext_resource type="Texture2D" uid="uid://cnb34xcfcgfu2" path="res://Assets/Tilemaps/winter_tilemap_2demo.png" id="2_ilqcu"]
-[ext_resource type="PackedScene" uid="uid://s4nck70s7fwg" path="res://LevelManager/Levels/Sandbox/pine_interact.tscn" id="3_pt7hv"]
-[ext_resource type="PackedScene" uid="uid://ce48ypd3h1x1m" path="res://Mobs/Enemies/Ogre/ogre.tscn" id="4_nnub6"]
+[ext_resource type="Script" path="res://LevelManager/Levels/Sandbox/sandbox.gd" id="1_tip14"]
+[ext_resource type="Texture2D" uid="uid://cnb34xcfcgfu2" path="res://Assets/Tilemaps/winter_tilemap_2demo.png" id="3_xjfon"]
+[ext_resource type="PackedScene" uid="uid://s4nck70s7fwg" path="res://LevelManager/Levels/Sandbox/pine_interact.tscn" id="4_roi4w"]
+[ext_resource type="PackedScene" uid="uid://ce48ypd3h1x1m" path="res://Mobs/Enemies/Ogre/ogre.tscn" id="5_hdoyx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uw3wf"]
-texture = ExtResource("2_ilqcu")
+texture = ExtResource("3_xjfon")
 18:0/0 = 0
 19:0/0 = 0
 20:0/0 = 0
@@ -259,9 +259,7 @@ turbulence_enabled = true
 turbulence_noise_scale = 3.0
 
 [node name="Sandbox" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource("1_xu7ik")]
-position = Vector2(852, 512)
+script = ExtResource("1_tip14")
 
 [node name="Textures" type="Node2D" parent="."]
 
@@ -297,10 +295,12 @@ text = "почему-то не прячет лейбл
 
 [node name="interactives" type="Node" parent="."]
 
-[node name="pine_interact" parent="interactives" instance=ExtResource("3_pt7hv")]
+[node name="pine_interact" parent="interactives" instance=ExtResource("4_roi4w")]
 position = Vector2(1075, 488)
 
-[node name="Enemy" parent="." instance=ExtResource("4_nnub6")]
+[node name="Enemy" parent="." instance=ExtResource("5_hdoyx")]
 position = Vector2(1341, 402)
 collision_layer = 1
 collision_mask = 1
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
